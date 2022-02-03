@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quiz</title>
+        <style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+	background-image: url(https://image.freepik.com/free-vector/neon-question-mark-frame-quiz-lighting-interrogation-point-red-neon-lamp-bricks-wall-texture-background-illustration_102902-1207.jpg);
+  background-attachment:fixed;
+	background-size: cover;
+  background-blend-mode: color;
+  }
+
+.wrapper {
+  max-width: 700px;
+  width: 100%;
+  margin: 50px auto;
+  margin-top: 250px;
+}
+
+.question {
+  background: rgba(255, 31, 31, 0.3);
+  background-size: cover;
+  opacity: 1;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 2em;
+  color: white;
+}
+.question-headline{
+  font-weight: 700;
+  border-bottom: 2px solid  white;
+  font-size: 1.5em;
+  color: white;
+  opacity: 1;
+}
+
+
+.line {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+
+.btn-check {
+  padding: 10px 20px;
+  background-color: #a52f2f;
+  color: white;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.5em;
+}            
+        </style>
+    </head>
+    <body>
+      <form action="{%url 'result'%}" method="post">
+        {% csrf_token %}
+    <div class='wrapper'>
+      
+    <div class='question'>
+    <div class='question-answers'>
+      <div class='answer'>
+        <input id='q1a1' name='question-1' type='radio' value='0'><label for="q1a1">I am seen as "outgoing" or as a "people person. </label></input>
+      </div>
+    <div class='answer'>
+        <input id='q1a2' name='question-1' type='radio' value='1'><label for="q1a2">I am seen as "reflective" or "reserved. </label></input>
+    </div>
+    </div>
+    </div>
+
+    <div class='question'>
+    <div class='question-answers'>
+    <div class='answer'>
+        <input id='q2a1' name='question-2' type='radio' value='0'><label for="q2a1">I feel comfortable in groups and like working in them. </label></input>
+    </div>
+    <div class='answer'>
+        <input id='q2a2' name='question-2' type='radio' value='1'><label for="q2a2">I feel comfortable being alone and like things I can do on my own.</label></input>
+    </div>
+    </div>
+    </div>
+
+  <div class='question'>
+
+  <div class='question-answers'>
+    <div class='answer'>
+      <input id='q3a1' name='question-3' type='radio' value='0'><label for="q3a1">Before I start a project, I sometimes forget to stop and get clear on what I want to do and why.</label></input>
+    </div>
+    <div class='answer'>
+      <input id='q3a2' name='question-3' type='radio' value='1'><label for="q3a2">I sometimes forget to check with the outside world to see if my ideas really fit the experience.
+      </label></input>
+    </div>
+  </div>
+  </div>
+
+  <div class='question'>
+    <div class='question-answers'>
+      <div class='answer'>
+        <input id='q1a1' name='question-4' type='radio' value='0'><label for="q1a1">I remember events as snapshots of what actually happened.</label></input>
+      </div>
+    <div class='answer'>
+        <input id='q1a2' name='question-4' type='radio' value='1'><label for="q1a2">I remember events by what I read "between the lines" about their meaning.</label></input>
+    </div>
+    </div>
+    </div>
+      
+  <div class='question'>
+    <div class='question-answers'>
+      <div class='answer'>
+        <input id='q1a1' name='question-5' type='radio' value='0'><label for="q1a1">I solve problems by working through facts until I understand the problem.</label></input>
+      </div>
+    <div class='answer'>
+        <input id='q1a2' name='question-5' type='radio' value='1'><label for="q1a2">I solve problems by leaping between different ideas and possibilities. </label></input>
+    </div>
+    </div>
+    </div>
+        
+  <div class='question'>
+    <div class='question-answers'>
+      <div class='answer'>
+        <input id='q1a1' name='question-6' type='radio' value='0'><label for="q1a1">I am pragmatic and look to the "bottom line". </label></input>
+      </div>
+    <div class='answer'>
+        <input id='q1a2' name='question-6' type='radio' value='1'><label for="q1a2">I am interested in doing things that are new and different</label></input>
+    </div>
+    </div>
+    </div>   
+    
+  <div class='question'>
+    <div class='question-answers'>
+      <div class='answer'>
+        <input id='q1a1' name='question-7' type='radio' value='0'><label for="q1a1">I enjoy technical and scientific fields where logic is important. </label></input>
+      </div>
+    <div class='answer'>
+        <input id='q1a2' name='question-7' type='radio' value='1'><label for="q1a2">I have a people or communications orientation. </label></input>
+    </div>
+    </div>
+    </div>
+      
+  <div class='question'>
+    <div class='question-answers'>
+      <div class='answer'>
+        <input id='q1a1' name='question-8' type='radio' value='0'><label for="q1a1">I notice inconsistencies.</label></input>
+      </div>
+    <div class='answer'>
+        <input id='q1a2' name='question-8' type='radio' value='1'><label for="q1a2">I am concerned with harmony and nervous when it is missing. </label></input>
+    </div>
+    </div>
+    </div>     
+        
+  <div class='question'>
+    <div class='question-answers'>
+      <div class='answer'>
+        <input id='q1a1' name='question-9' type='radio' value='0'><label for="q1a1">I look for logical explanations or solutions to most everything. </label></input>
+      </div>
+    <div class='answer'>
+        <input id='q1a2' name='question-9' type='radio' value='1'><label for="q1a2">I look for what is important to others and express concern for others.</label></input>
+    </div>
+    </div>
+    </div>
+
+  <div class='question'>
+    <div class='question-answers'>
+      <div class='answer'>
+        <input id='q1a1' name='question-10' type='radio' value='0'><label for="q1a1">I like to have things decided.</label></input>
+      </div>
+    <div class='answer'>
+        <input id='q1a2' name='question-10' type='radio' value='1'><label for="q1a2">I like to stay open to respond to whatever happens.</label></input>
+    </div>
+    </div>
+    </div>
+
+    <div class='question'>
+      <div class='question-answers'>
+        <div class='answer'>
+          <input id='q1a1' name='question-11' type='radio' value='0'><label for="q1a1">I appear to be task oriented.</label></input>
+        </div>
+      <div class='answer'>
+          <input id='q1a2' name='question-11' type='radio' value='1'><label for="q1a2">I appear to be loose and casual. I like to keep plans to a minimum.</label></input>
+      </div>
+      </div>
+      </div>
+
+      <div class='question'>
+        <div class='question-answers'>
+          <div class='answer'>
+            <input id='q1a1' name='question-12' type='radio' value='0'><label for="q1a1">I like to make lists of things to do.</label></input>
+          </div>
+        <div class='answer'>
+            <input id='q1a2' name='question-12' type='radio' value='1'><label for="q1a2">I like to approach work as play or mix work and play.</label></input>
+        </div>
+        </div>
+        </div>
+    <input class="btn-check" type="submit" value="submit">
+  <!--<button class='btn-check' type="submit">Antworten prüfen</button>-->
+  </div>
+  </form>
+    </body>
+</html>
