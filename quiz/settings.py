@@ -25,7 +25,7 @@ SECRET_KEY = 'f5q^ln0fp+9$8kwm7a0!g+r*cs7flotd+(c!#*8sr95^qiaa@3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bajajtrainingdemoapp.azurewebsites.net']#add hosts-name/url if you want to deploy app on cloud 
+ALLOWED_HOSTS = ['bajajtrainingdemoapp.azurewebsites.net','127.0.0.1','python-app-for-case-study.azurewebsites.net']#add hosts-name/url if you want to deploy app on cloud 
 
 
 # Application definition
